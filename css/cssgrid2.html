@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #02</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+            /* Grid 3x3 */
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            /* Grid 3x3 Nomeando as colunas */
+            grid-template-columns:
+                [inicio] 1fr
+                [meio-1] 1fr
+                [meio-2] 1fr [fim];
+            grid-template-columns: repeat(3, 1fr);
+           /* espaçamento entre linhas e colunas */ 
+            row-gap: 20px;
+            column-gap: 20px;
+            /* shortcut row / column */
+            gap: 20px 20px;
+        }
+        .d1 {
+            grid-column-start: meio-2;
+            grid-column-end: fim;
+            /* shortcut de rendimento */
+            grid-column: meio-2 / fim;
+            grid-row: 1 / span 2;
+            /* 
+               shortcut grid-area
+               parametros 
+                row-start / column-start / row-end / column-end
+            */
+            grid-area: 1 / meio-1 / span 3 / fim;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+</body>
+
+</html>

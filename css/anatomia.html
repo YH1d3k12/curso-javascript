@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            /* propriedades simples */
+            color: rgb(0, 0, 0);
+            font-size: 50px;
+            text-align: center;
+            border-radius: 20px;
+
+            /* multiplos valores */
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* shorthand property */
+            border: solid 5px navy;
+
+            /* função */
+            width: calc(100% -40px);
+            background-color: rgb(56, 26, 221);
+        }
+
+        /* pseudo-classe */
+        .selector:hover {
+            background-color: red;
+        }
+
+        /* pseudo-elemento */
+        .selector::first-letter {
+            font-size:60px;
+            font-weight: bold;
+        }
+
+        body {
+            background-color:lightblue;
+        }
+        /*
+         Padrões para nomenclaturas de classe:::first-letter
+         - camelCase
+         - dash-case
+
+         (*) Nomes de classe são case-sensitiveis - Css/Javascript
+         (*) Nomes de elementos HTML não são case-sensitive - Html
+        */
+    </style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div>
+</body>
+
+</html>

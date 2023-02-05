@@ -1,0 +1,55 @@
+<h1>Videos</h1>
+
+<video id="meu-video" width="800" height="450" controls>
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" 
+    type="video/mp4"/>
+    seu navegador não suporta a tag de vídeo do html5.
+</video>
+
+<div progresso="meu-video" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button play="meu-video">Play</button>
+    <button pause="meu-video">Pause</button>
+</div>
+
+<style>
+    .progresso {
+        height: 20px;
+        width: 760px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+    .progresso > div {
+        background-color: red;
+        color: white;
+        height: 100%;
+        width: 0%;
+        font-size: 14px;
+        text-align: right;
+    }
+</style>
+
+<script>
+    function videoConfig() {
+        const video = document.querySelector('#meu-video');
+        video.oncontextmenu = () => false;
+
+        const btnPlay = document.querySelector('[play=meu-video]');
+        btnPlay.onclick = (eventClick) => video.play();
+
+        const btnPause = document.querySelector('[pause=meu-video]');
+        btnPause.onclick = (eventClick) => video.pause();
+
+        setInterval(function() {
+            const percentual = (video.currentTime / video.duration) * 100;
+            const divPercentual = document.querySelector(".progresso > div")
+            divPercentual.style.width = `${percentual}%`;
+            divPercentual.innerHTML = `${percentual.toFixed(2)}%`;
+        }, 500)
+    }
+
+    videoConfig ("meu-video")
+</script>

@@ -1,0 +1,58 @@
+<h1>Formulários</h1>
+
+<form method="post">
+    <input type="hidden" name="id" value="abcd321321" />
+
+    <input type="text" name="nome" id="nome" />
+    <input type="password" name="senha" id="senha" />
+    <textarea name="biografia" id="biografia" cols="30" rows="10"></textarea>
+
+    <div id="user-type">
+        <input type="radio" name="tipo" id="admin" value="Administrador" />Administrador
+        <input type="radio" name="tipo" id="teacher" value="Professor" />Professor
+        <input type="radio" name="tipo" id="estudent" value="aluno" />Aluno
+    </div>
+
+    <div>
+        <input type="checkbox" name="ativo" id="active" />Ativo
+    </div>
+
+    <select name="estado" id="estado">
+        <option value="">Selecione o Estado</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="RG">Rio Grande do Sul</option>
+        <option value="PR">Paraná</option>
+    </select>    
+
+    <select name="interesses" multiple size=8>
+        <option value="js">JavaScript</option>
+        <option value="html5">HTML5</option>
+        <option value="css3">CSS3</option>
+        <option value="nodejs">Node.js</option>
+        <option value="expressjs">ExpressJS</option>
+        <option value="bootstrap4">Bootstrap4</option>
+        <option value="jquery">JQuery</option>
+        <option value="angular9">Angular9</option>
+    </select>
+
+    <button formmethod="GET"
+     formaction="http://192.168.0.11:3003/usuarios">Incluir</button>
+    <button formaction="http://192.168.0.11:3003/usuarios/1">Alterar</button>
+    
+</form>
+<style>
+    input, textarea, select {
+        display:block;
+        margin-bottom:16px;
+    }
+
+    input[type=radio],
+    input[type=checkbox] {
+        display: inline;
+    }
+
+    div {
+        margin-bottom: 16px;
+    }
+    
+</style>

@@ -1,0 +1,65 @@
+<h1>Tabelas</h1>
+
+Temos 3 grandes seções nas tabelas:
+<ul>
+    <li><b>Thead</b> - Cabeçalho</li>
+    <li><b>Tbody</b> - Corpo</li>
+    <li><b>Tfoot</b> - Rodapé</li>
+</ul>
+
+<table> 
+    <caption>Produtos</caption> <!-- Titulo -->
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPad</td>
+            <td>5.499,99</td>
+            <td>10</td>
+            <td>54.999,9</td>
+        </tr>
+        <tr>
+            <td>Moto G6</td>
+            <td>650,00</td>
+            <Td>10</Td>
+            <td>6.500,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td> <!-- colspan é para dizer que o elemento conta 3 espaços -->
+            <td>61.499,9</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<style>
+    table{
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    thead tr {
+        border-bottom: solid 3px #666;
+    }
+/* hover é para acontecer apenas quando o mouse passar em cima */
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #666;
+        color: white;
+        font-weight: bold;
+    }
+</style>

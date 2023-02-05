@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <style>
+        section{
+            padding: 30px 0px;
+        }
+        </style>
+        <title>Exercícios HTML</title>
+    </head>
+<body>
+    <header>
+        <h1>Exercícios </h1>
+    </header>
+    <nav>
+    
+        <a href="./exercicios/teste.html">00 - Teste</a> |
+        <a href="./exercicios/tags-texto-01.html">01 - Texto#01</a> |
+        <a href="./exercicios/tags-texto-02.html">02 - Texto#02</a> |
+        <a href="./exercicios/listas.html">03 - Listas</a> |
+        <a href="./exercicios/listas-alinhadas.html">04 - Desafio</a> |
+        <a href="./exercicios/links.html">05 - Links</a> |
+        <a href="./exercicios/tabelas.html">06 - Tabelas</a> |
+        <a href="./exercicios/form/form.html">07 - Formulários</a> |
+        <a href="./exercicios/imagens.html">08 - Imagens</a> |
+        <a href="./exercicios/videos.html">09 - Videos</a> |
+        <a href="./exercicios/tags-nao-visuais.html">10 - Tags não Visuais</a> |
+    </nav>
+    <section id="conteudo"></section>
+
+    <footer>Curso JavaScript 2020</footer>
+
+    <script>
+        const conteudo = document.querySelector('#conteudo')
+        document.querySelectorAll('a').forEach(link => {
+        
+        console.log(link.href)  
+        link.onclick = function(e) {
+            //impede a navegação para a próxima pagina
+            e.preventDefault()
+            
+            /*
+            * fetch() é uma função baseada em Promise (promessa)
+            * Podemos fazer uma requisição 'Ajax' sem necessitar de bibliotecas extremas
+            */
+            fetch(link.href)
+            .then(resposta => resposta.text())
+            .then(html => conteudo.innerHTML = html)
+        }  
+        })
+    </script>
+</body>
+</html>

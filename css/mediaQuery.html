@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Media Query</title>
+  </head>
+    <style>
+      div {
+        font-size: 40px;
+        margin: 20px;
+        padding: 20px;
+        background-color: coral;
+        border: solid 5px;
+        display: none;
+      }
+      body {
+        background-color:teal;
+      }
+
+
+      @media (max-width: 300px) {
+        .muito-pequeno {
+          display: block;
+        }
+      }
+      @media (max-width: 500px) {
+        .pequeno-retrato {
+          display: block;
+        }
+      }
+      @media (max-width: 800px) {
+        .intervalo {
+          display: block;
+        }
+      }
+      
+
+    </style>
+  <body>
+    <div class="muito-pequeno">Muito Pequeno</div>
+    <div class="pequeno-retrato">Pequeno ou Retrato</div>
+    <div class="intervalo">Intervalo</div>
+  </body>
+</html>

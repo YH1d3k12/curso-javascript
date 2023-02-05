@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body {
+            font-size:40px;
+            color: white;
+            background-color: coral;
+        }
+        ul {
+            padding:0%;
+        }
+        div {
+            background-color:seagreen;
+        }
+        span {
+            background-color:royalblue;
+        }
+        div, span, li {
+            width: 50%; /*no span não funciona porque tem display:inline por padrão*/
+            width: 200px; /*no span não funciona porque tem display:inline por padrão*/
+            height: 80px; /*no span não funciona porque tem display:inline por padrão*/
+            padding-top: 30px;
+            text-align: center;
+            /*
+            display block: altura e largura são habilitados
+             */
+            display:block;
+            /*
+            display inline: altura e largura são ignorados
+            display inline: somente padding é considerado
+             */
+             /*
+             display inline-block: mistura dos displays
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>
